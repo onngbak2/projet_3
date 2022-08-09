@@ -1,21 +1,81 @@
+body{
+    font-family:'Roboto','Shrikhand';
+    box-sizing: border-box;
+    margin: 0%;
+}
+* {
+    box-sizing: border-box;
+  }
+ //variables// 
 $color-primary : #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiaire:#99E2D0;
-
-$width-box: 100% 95% 90% 50% 30%;
-$shadow: 0 0 16px 0 #0000002e;
+$color-ombre:rgb(200, 197, 197);
+$width-box: 100% 95% 70% 50% 30%;
+$shadow: 3px 3px 2px $color-ombre;
+///////////////
 .header
 {
     width: nth($width-box , 1 );
+    background-color: rgba(255, 255, 255, 0.711);
     & figure{
         width: nth($width-box , 1 );
-        border: 2px solid black;
+        border-bottom: 1px solid #F2F2F2;
         box-shadow: $shadow;
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 20px;
+        margin-left: -8px;
+        margin: 0px;
+        
+        height: nth($width-box , 1 );
+       
         img{
             width: nth($width-box, 4);
             object-fit: cover;
         }
     }
+    & div{
+        background-color: #F2F2F2;
+        width: nth( $width-box, 1 );
+        height:  60px;
+        margin: 0px;
+        padding-top: 10px;
+        text-align: center;
+        padding-top: 15px;
+        & p{
+            margin: 0px;
+            font-size: 20px;
+            font-weight: lighter;
+            & i{
+                margin-right:5px; 
+            };
+        } 
+    }
+    &-P{
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    &-p{
+        text-align: center;
+        font-size: 25px;
+    }
+    & button{
+        border: 1px solid $color-secondary;
+        width: nth($width-box, 4);
+        background: linear-gradient(170deg, $color-secondary, $color-primary);
+        font-size: 20px;
+        box-shadow: $shadow;
+        margin-left: 55px;
+        height: 70px;
+        border-radius: 30px ;
+        & a{
+             text-decoration-line: none;
+             color: white;
+        }
+    }
+   
 }
 
 
