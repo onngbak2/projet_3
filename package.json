@@ -1,12 +1,19 @@
-
-  "name": "projet_3",
+{
+  "name": "package.json",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "sass" : "sass --watch ./sass/main.scss:./public/css/style.css"
-    "prefix":"post"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onngbak2/projet_3.git"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/onngbak2/projet_3/issues"
+  },
+  "homepage": "https://github.com/onngbak2/projet_3#readme"
 }
