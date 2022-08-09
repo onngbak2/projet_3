@@ -1,3 +1,14 @@
-
+.header {
+  width: 100%;
+}
+.header figure {
+  width: 100%;
+  border: 2px solid black;
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.1803921569);
+}
+.header figure img {
+  width: 50%;
+  object-fit: cover;
+}
 
 /*# sourceMappingURL=style.css.map */

@@ -2,6 +2,22 @@ $color-primary : #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiaire:#99E2D0;
 
+$width-box: 100% 95% 90% 50% 30%;
+$shadow: 0 0 16px 0 #0000002e;
+.header
+{
+    width: nth($width-box , 1 );
+    & figure{
+        width: nth($width-box , 1 );
+        border: 2px solid black;
+        box-shadow: $shadow;
+        img{
+            width: nth($width-box, 4);
+            object-fit: cover;
+        }
+    }
+}
+
 
 
 
