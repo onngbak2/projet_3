@@ -13,7 +13,7 @@ $color-tertiaire:#99E2D0;
 $color-ombre:#d3d3d3;
 $grey: #fcfcfc;
 $width-box: 100% 95% 70% 50% 30%;
-$shadow: 3px 3px 2px $color-ombre;
+$shadow: 0px 0px 16px 2px $color-ombre;
 ///////////////
 .header
 {
@@ -28,7 +28,7 @@ $shadow: 3px 3px 2px $color-ombre;
     & figure{
         width: nth($width-box , 1 );
         border-bottom: 1px solid $grey;
-        box-shadow: 0 10px 0 0 rgba(128, 128, 128, 0.068);
+        box-shadow: $shadow;
         text-align: center;
         padding-top: 30px;
         padding-bottom: 20px;
@@ -88,15 +88,155 @@ $shadow: 3px 3px 2px $color-ombre;
 
 .section
 {
-    &__fonction
+    &__fonction 
     {
-        & div
+        margin-left: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 400px;
+        &__btn
         {
-            display: flex;
+            display:  flex;
             flex-direction: row;
-            margin: 10px;
+            justify-content: space-between;
+            align-items: center;
+            padding-right: 35px;
+            height: 70px;
+            gap: 20px 5px;
+            width: nth( $width-box, 3 );
+            border: 1px solid $grey;
+            background-color: $grey;
+            border-radius: 20px;
+            box-shadow: $shadow;
+            line-height: 23px;
+            &-m
+            {
+                text-align: center;
+                text-decoration-line: none;
+                background-color: #9356DC;
+                position: relative;
+                color: #F2F2F2;
+                right: 10px;
+                width: 25px;
+                height: 25px;
+                border-radius: 12px;
+            }       
+        }
+        & h2
+        {
+            padding-top: 20px;
+            margin-bottom: 10px ;
+            font-size: 30px;
+            text-align: left;
+            width: nth($width-box, 1);
+        }
+        padding-bottom: 60px;
+    }
+    &__restaurents
+    {
+        background-color: $grey;
+        padding-top: 30px;
+        height: 1300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 30px;
+        margin-left: 8px;
+        & h2
+        {
+            width: nth($width-box, 1 );
+            font-size: 30px;
+            text-align: left;
+        }
+        &__card
+        {
+            
+            
+            height: 250px;
+            width: 90%;
+            margin-bottom: 30px;
+            border: 5px solid white;
+            background-color: white;
+            border-radius: 20px;
+            font-size: 15px;
+            box-shadow: 0 0 16px 0 #0000002e;
+            img{
+                object-fit: cover;
+                width: 100%;
+                height: 60%;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+            }
+            & p{
+                font-size: 20px;
+                color: black;
+                text-decoration-line: none;
+            }
+            &-m
+            {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding-right: 20px;
+                
+            }
         }
     }
 }
 
+.footer
+{
+    background-color: rgba(0, 0, 0, 0.76);
+    color: white;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-top: 10px;
+    &__ohmy{
+        font-size: 20px;
+        font-family: 'Shrikhand';
+        font-weight: bold;
+        font-style: italic;
+    }
+    & a{
+        text-decoration-line: none;
+        color: white;
+    }
+}
 
+@media screen and (min-width: 992px)
+{
+    .section
+    {
+        display: flex ;
+       flex-direction: row;
+       align-items: center;
+        &__fonction
+        {
+            & h2{
+                text-align: center;
+            }
+            &__btn
+            {
+                width: 40%;
+            }
+            width: 50%;
+        }
+        &__restaurents
+        {
+            height: 700px;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            column-gap: normal;
+            & h2{
+                text-align: center;
+            }
+            width: 100%;
+            &__card{
+                width: 50%;
+            }
+            border: 2px solid black;
+        }
+    }
+}
