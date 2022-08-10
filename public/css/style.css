@@ -186,27 +186,32 @@ body {
     align-items: center;
   }
   .section__fonction {
+    border: 2px solid #fcfcfc;
+    box-shadow: 0px 0px 16px 2px #d3d3d3;
+    align-self: center;
     width: 50%;
   }
   .section__fonction h2 {
     text-align: center;
   }
   .section__fonction__btn {
-    width: 40%;
+    width: 70%;
   }
   .section__restaurents {
     height: 700px;
     flex-flow: row wrap;
-    justify-content: flex-start;
-    column-gap: normal;
-    width: 100%;
-    border: 2px solid black;
+    width: 90%;
+    justify-content: space-around;
   }
   .section__restaurents h2 {
     text-align: center;
   }
   .section__restaurents__card {
-    width: 50%;
+    width: 45%;
+  }
+  .section__restaurents__card-m {
+    display: flex;
+    flex-direction: row;
   }
 }
 
