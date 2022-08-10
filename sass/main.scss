@@ -10,26 +10,32 @@ body{
 $color-primary : #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiaire:#99E2D0;
-$color-ombre:rgb(200, 197, 197);
+$color-ombre:#d3d3d3;
+$grey: #fcfcfc;
 $width-box: 100% 95% 70% 50% 30%;
 $shadow: 3px 3px 2px $color-ombre;
 ///////////////
 .header
 {
+   
+    display: flex;
+    flex-direction: column ;
     width: nth($width-box , 1 );
-    background-color: rgba(255, 255, 255, 0.711);
+    background-color: $grey;
+    border: 1px solid $grey;
+    box-shadow: $shadow;
+    padding-bottom: 30px;
     & figure{
         width: nth($width-box , 1 );
-        border-bottom: 1px solid #F2F2F2;
-        box-shadow: $shadow;
+        border-bottom: 1px solid $grey;
+        box-shadow: 0 10px 0 0 rgba(128, 128, 128, 0.068);
         text-align: center;
         padding-top: 30px;
         padding-bottom: 20px;
         margin-left: -8px;
         margin: 0px;
-        
         height: nth($width-box , 1 );
-       
+        background-color: white;
         img{
             width: nth($width-box, 4);
             object-fit: cover;
@@ -55,6 +61,7 @@ $shadow: 3px 3px 2px $color-ombre;
     &-P{
         text-align: center;
         font-size: 30px;
+        margin-bottom: 0px;
         font-weight: bold;
     }
     &-p{
@@ -63,13 +70,14 @@ $shadow: 3px 3px 2px $color-ombre;
     }
     & button{
         border: 1px solid $color-secondary;
-        width: nth($width-box, 4);
-        background: linear-gradient(170deg, $color-secondary, $color-primary);
+        width: nth($width-box, 3);
+        background: linear-gradient(190deg, $color-secondary, $color-primary);
         font-size: 20px;
         box-shadow: $shadow;
-        margin-left: 55px;
+        
         height: 70px;
         border-radius: 30px ;
+        align-self: center;
         & a{
              text-decoration-line: none;
              color: white;
@@ -78,6 +86,17 @@ $shadow: 3px 3px 2px $color-ombre;
    
 }
 
-
+.section
+{
+    &__fonction
+    {
+        & div
+        {
+            display: flex;
+            flex-direction: row;
+            margin: 10px;
+        }
+    }
+}
 
 

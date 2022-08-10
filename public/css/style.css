@@ -9,19 +9,25 @@ body {
 }
 
 .header {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.711);
+  background-color: #fcfcfc;
+  border: 1px solid #fcfcfc;
+  box-shadow: 3px 3px 2px #d3d3d3;
+  padding-bottom: 30px;
 }
 .header figure {
   width: 100%;
-  border-bottom: 1px solid #F2F2F2;
-  box-shadow: 3px 3px 2px rgb(200, 197, 197);
+  border-bottom: 1px solid #fcfcfc;
+  box-shadow: 0 10px 0 0 rgba(128, 128, 128, 0.068);
   text-align: center;
   padding-top: 30px;
   padding-bottom: 20px;
   margin-left: -8px;
   margin: 0px;
   height: 100%;
+  background-color: white;
 }
 .header figure img {
   width: 50%;
@@ -47,6 +53,7 @@ body {
 .header-P {
   text-align: center;
   font-size: 30px;
+  margin-bottom: 0px;
   font-weight: bold;
 }
 .header-p {
@@ -55,17 +62,23 @@ body {
 }
 .header button {
   border: 1px solid #FF79DA;
-  width: 50%;
-  background: linear-gradient(170deg, #FF79DA, #9356DC);
+  width: 70%;
+  background: linear-gradient(190deg, #FF79DA, #9356DC);
   font-size: 20px;
-  box-shadow: 3px 3px 2px rgb(200, 197, 197);
-  margin-left: 55px;
+  box-shadow: 3px 3px 2px #d3d3d3;
   height: 70px;
   border-radius: 30px;
+  align-self: center;
 }
 .header button a {
   text-decoration-line: none;
   color: white;
+}
+
+.section__fonction div {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
