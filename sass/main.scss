@@ -13,7 +13,7 @@ $color-tertiaire:#99E2D0;
 $color-ombre:#d3d3d3;
 $color-primary-grad: linear-gradient(190deg, $color-secondary, $color-primary);
 $grey: #fcfcfc;
-$width-box: 100% 95% 70% 50% 30%;
+$width-box: 100% 90% 80% 65% 50% 30%;
 $shadow: 0px 0px 16px 2px $color-ombre;
 ///////////////
 .header
@@ -28,7 +28,7 @@ $shadow: 0px 0px 16px 2px $color-ombre;
     padding-bottom: 30px;
     & figure{
         width: nth($width-box , 1 );
-        border-bottom: 1px solid $grey;
+        border-bottom: 1px solid black;
         box-shadow: $shadow;
         text-align: center;
         padding-top: 30px;
@@ -52,7 +52,7 @@ $shadow: 0px 0px 16px 2px $color-ombre;
         padding-top: 15px;
         & p{
             margin: 0px;
-            font-size: 20px;
+            font-size: 15px;
             font-weight: lighter;
             & i{
                 margin-right:5px; 
@@ -61,22 +61,27 @@ $shadow: 0px 0px 16px 2px $color-ombre;
     }
     &-P{
         text-align: center;
-        font-size: 30px;
+        font-size: 25px;
         margin-bottom: 0px;
+        width: nth($width-box, 3 );
+        padding-left: 55px;
         font-weight: bold;
     }
-    &-p{
+    &-P1{
         text-align: center;
-        font-size: 25px;
+        font-size: 20px;
+        width: nth($width-box, 2 );
+        padding-left: 25px;
+
     }
-    & button{
+    & .btn{
         border: 1px solid $color-secondary;
-        width: nth($width-box, 3);
+        width: nth($width-box, 4);
         background: $color-primary-grad;
         font-size: 20px;
         box-shadow: $shadow;
         
-        height: 70px;
+        height: 65px;
         border-radius: 30px ;
         align-self: center;
         & a{
@@ -92,12 +97,13 @@ $shadow: 0px 0px 16px 2px $color-ombre;
     &__fonction 
     {
         margin-left: 8px;
+        
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
         height: 450px;
-        &__btn
+        &__menu
         {
             padding-right: 35px;
             height: 70px;
@@ -132,8 +138,9 @@ $shadow: 0px 0px 16px 2px $color-ombre;
         & h2
         {
             padding-top: 20px;
+           padding-left: 20px;
             margin-bottom: 10px ;
-            font-size: 30px;
+            font-size: 25px;
             text-align: left;
             width: nth($width-box, 1);
         }
@@ -148,17 +155,18 @@ $shadow: 0px 0px 16px 2px $color-ombre;
         flex-direction: column;
         align-items: center;
         padding-bottom: 30px;
-        margin-left: 8px;
+       
         & h2
         {
             width: nth($width-box, 1 );
-            font-size: 30px;
+            font-size: 25px;
+            padding-left: 20px;
             text-align: left;
         }
         &__card
         {  
             height: 250px;
-            width: 90%;
+            width: nth($width-box, 2);
             margin-bottom: 30px;
             background-color: white;
             border-radius: 20px;
@@ -192,12 +200,14 @@ $shadow: 0px 0px 16px 2px $color-ombre;
             }
             .heart
             {
-                opacity: 0;
+                
                 
                 &:hover
                 {
-                    background: $color-primary-grad;
+                    
+                    background-color: $color-primary-grad;
                 }
+            }
         }
     }
 }
