@@ -120,7 +120,7 @@ body {
   text-align: left;
   width: 100%;
 }
-.section__restaurents {
+.section__restaurants {
   background-color: #fcfcfc;
   padding-top: 30px;
   height: 1300px;
@@ -130,12 +130,12 @@ body {
   padding-bottom: 30px;
   margin-left: 8px;
 }
-.section__restaurents h2 {
+.section__restaurants h2 {
   width: 100%;
   font-size: 30px;
   text-align: left;
 }
-.section__restaurents__card {
+.section__restaurants__card {
   height: 250px;
   width: 90%;
   margin-bottom: 30px;
@@ -144,23 +144,27 @@ body {
   font-size: 15px;
   box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.1803921569);
 }
-.section__restaurents__card img {
+.section__restaurants__card img {
   object-fit: cover;
   width: 100%;
   height: 60%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
-.section__restaurents__card p {
+.section__restaurants__card p {
   font-size: 20px;
   color: black;
   text-decoration-line: none;
 }
-.section__restaurents__card-m {
+.section__restaurants__card-m {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  text-decoration: none;
   padding-right: 20px;
+}
+.section__restaurants__card-m1 {
+  font-weight: lighter;
 }
 
 .footer {

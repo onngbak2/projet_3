@@ -138,7 +138,7 @@ $shadow: 0px 0px 16px 2px $color-ombre;
         }
         padding-bottom: 60px;
     }
-    &__restaurents
+    &__restaurants
     {
         background-color: $grey;
         padding-top: 30px;
@@ -182,9 +182,13 @@ $shadow: 0px 0px 16px 2px $color-ombre;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
-
+                text-decoration: none;
                 padding-right: 20px;
                 
+            }
+            &-m1
+            {
+                font-weight: lighter;
             }
             
         }
