@@ -158,6 +158,20 @@ body {
   font-size: 15px;
   box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.1803921569);
 }
+.section__restaurants__card .Bnew {
+  height: 30px;
+  width: 90px;
+  font-size: 18px;
+  text-align: center;
+  padding-top: 5px;
+  color: rgb(0, 138, 0);
+  float: right;
+  opacity: 90%;
+  position: relative;
+  bottom: 150px;
+  right: 10px;
+  background-color: rgb(169, 230, 169);
+}
 .section__restaurants__card:hover {
   width: 95%;
   box-shadow: 6px 6px 16px 10px #d3d3d3;
@@ -184,6 +198,10 @@ body {
 .section__restaurants__card-m1 {
   text-decoration: none;
 }
+.section__restaurants__cardm2 {
+  position: relative;
+  left: 100px;
+}
 .section__restaurants__card .heart:hover {
   font-size: 60px;
   background: linear-gradient(190deg, #FF79DA, #9356DC);
@@ -199,7 +217,6 @@ body {
 }
 .footer__ohmy {
   font-size: 20px;
-  font-family: "Shrikhand";
   font-weight: bold;
   font-style: italic;
 }
@@ -209,9 +226,6 @@ body {
 }
 
 @media screen and (min-width: 992px) {
-  body {
-    background-image: url("projet3/images/imageParis.jpeg");
-  }
   .header {
     margin-bottom: 20px;
   }
