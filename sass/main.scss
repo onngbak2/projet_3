@@ -400,6 +400,7 @@ $shadow: 0px 0px 16px 2px $color-ombre;
 {
     border-radius: 40px 40px;
     background-color: $grey;
+    
     margin-top: -55px;
     position: relative;
     padding-top: 20px;
@@ -415,13 +416,16 @@ $shadow: 0px 0px 16px 2px $color-ombre;
     }
     &__entrées
     {
+        height: 300px;
+
         display: flex;
+        justify-content: space-around;
         flex-direction: column;
         & h2
         {
            font-size: 17px ;
            margin-left: 18px;
-           margin-bottom: 4px;
+           margin-bottom: 0px;
         }
         &-m
         {
@@ -434,10 +438,116 @@ $shadow: 0px 0px 16px 2px $color-ombre;
         &_card
         {
             width: nth($width-box, 3);
-            border: 2px solid black;
-            padding-bottom: 10px;
-            height: 80px;
-            gap: 0px 0px;
+            background-color: #fff;
+            box-shadow: $shadow;
+            margin-left: 18px;
+            border: 1px solid white;
+            border-radius: 10px 10px;
+            height: 60px;
+            & p
+            {
+                margin: 4px;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+     &__plats
+    {
+        height: 300px;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        & h2
+        {
+           font-size: 17px ;
+           margin-left: 18px;
+           margin-bottom: 0px;
+        }
+        &-m
+        {
+            margin-top: 0px;
+            background-color: $green;
+            margin-left: 19px;
+            width: 45px;
+            height: 2px;
+        }
+        &_card
+        {
+            width: nth($width-box, 3);
+            background-color: #fff;
+            box-shadow: $shadow;
+            margin-left: 18px;
+            border: 1px solid white;
+            border-radius: 10px 10px;
+            height: 60px;
+            & p
+            {
+                margin: 4px;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+    &__desserts
+    {
+        height: 400px;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        
+        & h2
+        {
+           font-size: 17px ;
+           margin-left: 18px;
+           margin-bottom: 0px;
+        }
+        &-m
+        {
+            margin-top: 0px;
+            background-color: $green;
+            margin-left: 19px;
+            width: 45px;
+            height: 2px;
+        }
+        &_card
+        {
+            width: nth($width-box, 3);
+            background-color: #fff;
+            box-shadow: $shadow;
+            margin-left: 18px;
+            border: 1px solid white;
+            border-radius: 10px 10px;
+            height: 60px;
+            & p
+            {
+                margin: 4px;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+
+    & .btn
+    {
+        border: 1px solid $color-secondary;
+        width: nth($width-box, 5);
+        margin-left: 50px;
+        background: $color-primary-grad;
+        font-size: 20px;
+        box-shadow: $shadow;
+        height: 50px;
+        border-radius: 30px ;
+        align-self: center;
+        color: white;
+        & a{
+             text-decoration-line: none;
+             color: white;
+        }
+        &:hover
+        {
+           background: linear-gradient(40deg, $color-secondary , $color-primary);
+           box-shadow: 6px 6px 16px 10px $color-ombre ;
         }
     }
 }

@@ -345,13 +345,15 @@ body {
   padding: 5px 20px 5px 20px;
 }
 .section1__entrées {
+  height: 300px;
   display: flex;
+  justify-content: space-around;
   flex-direction: column;
 }
 .section1__entrées h2 {
   font-size: 17px;
   margin-left: 18px;
-  margin-bottom: 4px;
+  margin-bottom: 0px;
 }
 .section1__entrées-m {
   margin-top: 0px;
@@ -362,10 +364,101 @@ body {
 }
 .section1__entrées_card {
   width: 80%;
-  border: 2px solid black;
-  padding-bottom: 10px;
-  height: 80px;
-  gap: 0px 0px;
+  background-color: #fff;
+  box-shadow: 0px 0px 16px 2px #d3d3d3;
+  margin-left: 18px;
+  border: 1px solid white;
+  border-radius: 10px 10px;
+  height: 60px;
+}
+.section1__entrées_card p {
+  margin: 4px;
+  display: flex;
+  justify-content: space-between;
+}
+.section1__plats {
+  height: 300px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.section1__plats h2 {
+  font-size: 17px;
+  margin-left: 18px;
+  margin-bottom: 0px;
+}
+.section1__plats-m {
+  margin-top: 0px;
+  background-color: rgb(169, 230, 169);
+  margin-left: 19px;
+  width: 45px;
+  height: 2px;
+}
+.section1__plats_card {
+  width: 80%;
+  background-color: #fff;
+  box-shadow: 0px 0px 16px 2px #d3d3d3;
+  margin-left: 18px;
+  border: 1px solid white;
+  border-radius: 10px 10px;
+  height: 60px;
+}
+.section1__plats_card p {
+  margin: 4px;
+  display: flex;
+  justify-content: space-between;
+}
+.section1__desserts {
+  height: 400px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.section1__desserts h2 {
+  font-size: 17px;
+  margin-left: 18px;
+  margin-bottom: 0px;
+}
+.section1__desserts-m {
+  margin-top: 0px;
+  background-color: rgb(169, 230, 169);
+  margin-left: 19px;
+  width: 45px;
+  height: 2px;
+}
+.section1__desserts_card {
+  width: 80%;
+  background-color: #fff;
+  box-shadow: 0px 0px 16px 2px #d3d3d3;
+  margin-left: 18px;
+  border: 1px solid white;
+  border-radius: 10px 10px;
+  height: 60px;
+}
+.section1__desserts_card p {
+  margin: 4px;
+  display: flex;
+  justify-content: space-between;
+}
+.section1 .btn {
+  border: 1px solid #FF79DA;
+  width: 50%;
+  margin-left: 50px;
+  background: linear-gradient(190deg, #FF79DA, #9356DC);
+  font-size: 20px;
+  box-shadow: 0px 0px 16px 2px #d3d3d3;
+  height: 50px;
+  border-radius: 30px;
+  align-self: center;
+  color: white;
+}
+.section1 .btn a {
+  text-decoration-line: none;
+  color: white;
+}
+.section1 .btn:hover {
+  background: linear-gradient(40deg, #FF79DA, #9356DC);
+  box-shadow: 6px 6px 16px 10px #d3d3d3;
 }
 
 /*# sourceMappingURL=style.css.map */
