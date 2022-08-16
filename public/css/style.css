@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: Roboto, Shrikhand;
   box-sizing: border-box;
@@ -12,14 +13,14 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: #fcfcfc;
-  border: 1px solid #fcfcfc;
+  background-color: #f6f6f6;
+  border: 1px solid #f6f6f6;
   box-shadow: 0px 0px 16px 2px #d3d3d3;
   padding-bottom: 30px;
 }
 .header figure {
   width: 100%;
-  border-bottom: 1px solid #fcfcfc;
+  border-bottom: 1px solid #f6f6f6;
   box-shadow: 0px 0px 16px 2px #d3d3d3;
   text-align: center;
   padding-top: 30px;
@@ -97,9 +98,9 @@ body {
   padding-right: 35px;
   height: 70px;
   gap: 20px 5px;
-  border: 1px solid #fcfcfc;
+  border: 1px solid #f6f6f6;
   width: 90%;
-  background-color: #fcfcfc;
+  background-color: #f6f6f6;
   border-radius: 20px;
   box-shadow: 0px 0px 16px 2px #d3d3d3;
   line-height: 23px;
@@ -135,7 +136,7 @@ body {
   width: 100%;
 }
 .section__restaurants {
-  background-color: #fcfcfc;
+  background-color: #f6f6f6;
   padding-top: 30px;
   height: 1300px;
   display: flex;
@@ -253,7 +254,7 @@ body {
     background: linear-gradient(40deg, #FF79DA, #9356DC);
     display: flex;
     flex-flow: row wrap;
-    border: 2px solid #fcfcfc;
+    border: 2px solid #f6f6f6;
     box-shadow: 0px 0px 16px 2px #d3d3d3;
     align-self: center;
     border-radius: 10px 10px 10px 10px;
@@ -296,11 +297,75 @@ body {
     color: white;
   }
 }
+.body1 {
+  font-family: Roboto, Shrikhand;
+}
+
 .header1 {
+  width: 100%;
+}
+.header1 .figure1 {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   border: 10 solid #9356DC;
+  padding-right: 70px;
+  margin-left: Opx;
+  height: 50px;
+}
+.header1 .figure1-m {
+  width: 60%;
+  height: 30px;
+}
+.header1 .figure1-m1 {
+  font-size: 25px;
+  position: relative;
+  right: 20px;
+}
+.header1-m {
+  object-fit: cover;
+  width: 100%;
+}
+
+.section1 {
+  border-radius: 40px 40px;
+  background-color: #f6f6f6;
+  margin-top: -55px;
+  position: relative;
+  padding-top: 20px;
+}
+.section1__titre {
+  font-size: 15px;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px 20px 5px 20px;
+}
+.section1__entrées {
+  display: flex;
+  flex-direction: column;
+}
+.section1__entrées h2 {
+  font-size: 17px;
+  margin-left: 18px;
+  margin-bottom: 4px;
+}
+.section1__entrées-m {
+  margin-top: 0px;
+  background-color: rgb(169, 230, 169);
+  margin-left: 19px;
+  width: 45px;
+  height: 2px;
+}
+.section1__entrées_card {
+  width: 80%;
+  border: 2px solid black;
+  padding-bottom: 10px;
+  height: 80px;
+  gap: 0px 0px;
 }
 
 /*# sourceMappingURL=style.css.map */

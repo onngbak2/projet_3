@@ -1,5 +1,5 @@
 body{
-    font-family:Roboto,Shrikhand;
+    font-family: Roboto,Shrikhand;
     box-sizing: border-box;
     margin: 0%;
 }
@@ -13,7 +13,8 @@ $color-tertiaire:#99E2D0;
 $color-ombre:#d3d3d3;
 $color-primary-grad: linear-gradient(190deg, $color-secondary, $color-primary);
 $color-primary-gradrev:linear-gradient(40deg, $color-secondary , $color-primary);
-$grey: #fcfcfc;
+$green: rgb(169, 230, 169);
+$grey: #f6f6f6;
 $width-box: 100% 90% 80% 65% 50% 30%;
 $shadow: 0px 0px 16px 2px $color-ombre;
 ///////////////
@@ -359,15 +360,84 @@ $shadow: 0px 0px 16px 2px $color-ombre;
     }
 }
 //page standart//
-
+.body1
+{
+    font-family: Roboto,Shrikhand;
+}
 .header1
 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    border: 10 solid #9356DC;
+    & .figure1
+    {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        border: 10 solid #9356DC;
+        padding-right: 70px;
+        margin-left: Opx;
+        height: 50px;
+        &-m
+        {
+            width: 60%;
+            height: 30px;
+        }
+        &-m1
+        {
+           font-size: 25px;
+           position: relative;
+           right: 20px;
+        }
+
+    }
+    &-m
+    {
+        object-fit: cover;
+        width: 100%;
+    }
+    width: nth($width-box, 1);
 }
 .section1
 {
-    
+    border-radius: 40px 40px;
+    background-color: $grey;
+    margin-top: -55px;
+    position: relative;
+    padding-top: 20px;
+    &__titre
+    {
+        font-size: 15px;
+        font-style: italic;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 5px 20px 5px 20px ;
+    }
+    &__entrées
+    {
+        display: flex;
+        flex-direction: column;
+        & h2
+        {
+           font-size: 17px ;
+           margin-left: 18px;
+           margin-bottom: 4px;
+        }
+        &-m
+        {
+            margin-top: 0px;
+            background-color: $green;
+            margin-left: 19px;
+            width: 45px;
+            height: 2px;
+        }
+        &_card
+        {
+            width: nth($width-box, 3);
+            border: 2px solid black;
+            padding-bottom: 10px;
+            height: 80px;
+            gap: 0px 0px;
+        }
+    }
 }
