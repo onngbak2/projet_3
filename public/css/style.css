@@ -323,6 +323,9 @@ body {
   position: relative;
   right: 20px;
 }
+.header1 .figure1-m1 a {
+  color: black;
+}
 .header1-m {
   object-fit: cover;
   width: 100%;
@@ -443,11 +446,10 @@ body {
 .section1 .btn {
   border: 1px solid #FF79DA;
   width: 50%;
-  margin-left: 50px;
   background: linear-gradient(190deg, #FF79DA, #9356DC);
   font-size: 20px;
   box-shadow: 0px 0px 16px 2px #d3d3d3;
-  height: 50px;
+  height: 65px;
   border-radius: 30px;
   align-self: center;
   color: white;
