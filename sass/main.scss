@@ -12,6 +12,7 @@ $color-secondary: #FF79DA;
 $color-tertiaire:#99E2D0;
 $color-ombre:#d3d3d3;
 $color-primary-grad: linear-gradient(190deg, $color-secondary, $color-primary);
+$color-primary-gradrev:linear-gradient(40deg, $color-secondary , $color-primary);
 $grey: #fcfcfc;
 $width-box: 100% 90% 80% 65% 50% 30%;
 $shadow: 0px 0px 16px 2px $color-ombre;
@@ -91,7 +92,7 @@ $shadow: 0px 0px 16px 2px $color-ombre;
         &:hover
         {
            background: linear-gradient(40deg, $color-secondary , $color-primary);
-           box-shadow: 0px 0px 16px 6px $color-ombre ;
+           box-shadow: 6px 6px 16px 10px $color-ombre ;
         }
     }
    
@@ -119,6 +120,10 @@ $shadow: 0px 0px 16px 2px $color-ombre;
             border-radius: 20px;
             box-shadow: $shadow;
             line-height: 23px;
+            &:hover
+            {
+                background-color: rgb(164, 161, 161);
+            }
             &-m1
             {
                 display:  flex;
@@ -177,6 +182,11 @@ $shadow: 0px 0px 16px 2px $color-ombre;
             border-radius: 20px;
             font-size: 15px;
             box-shadow: 0 0 16px 0 #0000002e;
+            &:hover
+            {
+                width: 95%;
+                box-shadow: 6px 6px 16px 10px $color-ombre;
+            }
             img{
                 object-fit: cover;
                 width: 100%;
@@ -206,11 +216,11 @@ $shadow: 0px 0px 16px 2px $color-ombre;
             .heart
             {
                 
-                
                 &:hover
                 {
-                    
-                    background-color: $color-primary-grad;
+                    font-size:60px; 
+                    background: $color-primary-grad;
+                    border-color: $color-primary-grad;
                 }
             }
         }
@@ -241,29 +251,35 @@ $shadow: 0px 0px 16px 2px $color-ombre;
     .section
     {
         display: flex ;
-       flex-direction: row;
+       flex-direction: column;
        align-items: center;
         &__fonction
         {
+            display: flex;
+            flex-flow: row wrap;
             border: 2px solid $grey;
             box-shadow: $shadow;
             align-self: center;
+            width: 95%;
+            height: 200px;
+            padding: 10px 10px 10px 10px;
             & h2
             {
                 text-align: center;
+                padding-top: 0;
+                width: nth($width-box, 1);
             }
-            &__btn
+            &__menu
             {
-                width: 70%;
+                width: nth($width-box, 6);
                 
             }
-            width: 50%;
         }
         &__restaurents
         {
             height: 700px;
             flex-flow: row wrap;
-            width: 90%;
+            width: nth($width-box, 2);
             justify-content: space-around;
             & h2{
                 text-align: center;
