@@ -373,7 +373,7 @@ body {
   margin-left: 18px;
   border: 1px solid white;
   border-radius: 10px 10px;
-  height: 60px;
+  height: 65px;
 }
 .section1__entrées_card p {
   margin: 4px;
@@ -405,7 +405,7 @@ body {
   margin-left: 18px;
   border: 1px solid white;
   border-radius: 10px 10px;
-  height: 60px;
+  height: 65px;
 }
 .section1__plats_card p {
   margin: 4px;
@@ -437,7 +437,7 @@ body {
   margin-left: 18px;
   border: 1px solid white;
   border-radius: 10px 10px;
-  height: 60px;
+  height: 65px;
 }
 .section1__desserts_card p {
   margin: 4px;
@@ -465,14 +465,32 @@ body {
 }
 
 @media screen and (min-width: 992px) {
+  .header1 {
+    height: 400px;
+  }
+  .header1 .figure1 {
+    padding-right: 580px;
+  }
+  .header1 .figure1-m {
+    width: 30%;
+    height: 50px;
+  }
+  .header1-m {
+    height: 350px;
+  }
   .section1 {
     display: flex;
     flex-flow: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding-right: 30px;
   }
   .section1__titre {
     width: 100%;
-    padding-right: 1100px;
+  }
+  .section1 .btn {
+    position: relative;
+    right: 555px;
+    font-size: 17px;
   }
 }
 
