@@ -174,7 +174,6 @@ body {
   background-color: rgb(169, 230, 169);
 }
 .section__restaurants__card:hover {
-  width: 95%;
   box-shadow: 6px 6px 16px 10px #d3d3d3;
 }
 .section__restaurants__card img {
@@ -376,6 +375,7 @@ body {
   height: 65px;
 }
 .section1__entrées_card p {
+  width: 100%;
   margin: 4px;
   display: flex;
   justify-content: space-between;
@@ -488,6 +488,7 @@ body {
     width: 100%;
   }
   .section1 .btn {
+    width: 65%;
     position: relative;
     right: 555px;
     font-size: 17px;
