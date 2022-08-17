@@ -384,7 +384,9 @@ $shadow: 0px 0px 16px 2px $color-ombre;
         &-m1
         {
            font-size: 25px;
+           height: 50px;
            position: relative;
+           
            right: 20px;
            & a
            {
@@ -441,7 +443,7 @@ $shadow: 0px 0px 16px 2px $color-ombre;
         }
         &_card
         {
-            width: nth($width-box, 3);
+            width: nth($width-box, 2);
             background-color: #fff;
             box-shadow: $shadow;
             margin-left: 18px;
@@ -478,7 +480,7 @@ $shadow: 0px 0px 16px 2px $color-ombre;
         }
         &_card
         {
-            width: nth($width-box, 3);
+            width: nth($width-box, 2);
             background-color: #fff;
             box-shadow: $shadow;
             margin-left: 18px;
@@ -516,7 +518,7 @@ $shadow: 0px 0px 16px 2px $color-ombre;
         }
         &_card
         {
-            width: nth($width-box, 3);
+            width: nth($width-box, 2);
             background-color: #fff;
             box-shadow: $shadow;
             margin-left: 18px;
@@ -553,4 +555,23 @@ $shadow: 0px 0px 16px 2px $color-ombre;
            box-shadow: 6px 6px 16px 10px $color-ombre ;
         }
     }
+}
+
+@media screen and (min-width: 992px)
+{
+    .header
+    {
+        
+    }
+    .section1
+    {
+        display: flex;
+        flex-flow: wrap;
+        justify-content: space-around;
+        &__titre
+        {
+            width: nth($width-box, 1);
+            padding-right: 1100px;
+        }
+    }    
 }
