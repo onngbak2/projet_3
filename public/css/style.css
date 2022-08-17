@@ -320,6 +320,7 @@ body {
 }
 .header1 .figure1-m1 {
   font-size: 25px;
+  height: 50px;
   position: relative;
   right: 20px;
 }
@@ -366,7 +367,7 @@ body {
   height: 2px;
 }
 .section1__entrées_card {
-  width: 80%;
+  width: 90%;
   background-color: #fff;
   box-shadow: 0px 0px 16px 2px #d3d3d3;
   margin-left: 18px;
@@ -398,7 +399,7 @@ body {
   height: 2px;
 }
 .section1__plats_card {
-  width: 80%;
+  width: 90%;
   background-color: #fff;
   box-shadow: 0px 0px 16px 2px #d3d3d3;
   margin-left: 18px;
@@ -430,7 +431,7 @@ body {
   height: 2px;
 }
 .section1__desserts_card {
-  width: 80%;
+  width: 90%;
   background-color: #fff;
   box-shadow: 0px 0px 16px 2px #d3d3d3;
   margin-left: 18px;
@@ -461,6 +462,18 @@ body {
 .section1 .btn:hover {
   background: linear-gradient(40deg, #FF79DA, #9356DC);
   box-shadow: 6px 6px 16px 10px #d3d3d3;
+}
+
+@media screen and (min-width: 992px) {
+  .section1 {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+  }
+  .section1__titre {
+    width: 100%;
+    padding-right: 1100px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
