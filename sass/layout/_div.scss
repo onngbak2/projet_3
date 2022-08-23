@@ -1,0 +1,61 @@
+.section1__titre
+{
+    font-size: 15px;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px 20px 5px 20px ;
+}
+.section1__desserts_card
+{
+    width: nth($width-box, 2);
+    background-color: #fff;
+    box-shadow: $shadow;
+    margin-left: 18px;
+    border: 1px solid white;
+    border-radius: 10px 10px;
+    height: 65px;
+    & p
+    {
+        margin: 4px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.section1__plats_card
+{
+    width: nth($width-box, 2);
+    background-color: #fff;
+    box-shadow: $shadow;
+    margin-left: 18px;
+    border: 1px solid white;
+    border-radius: 10px 10px;
+    height: 65px;
+    & p
+    {
+        margin: 4px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.section1__entrées_card
+{
+   width: nth($width-box, 2);
+   background-color: #fff;
+   box-shadow : $shadow;
+   margin-left: 18px;
+   border: 1px solid white;
+   border-radius: 10px 10px;
+   height: 65px;
+   & p
+   {
+       padding-right: 10px;
+       width: 100%;
+       margin: 4px;
+       display: flex;
+       justify-content: space-between;
+   }
+}

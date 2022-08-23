@@ -1,1 +1,66 @@
-aaa
+.header1
+{
+    & .figure1
+    {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        border: 10 solid #9356DC;
+        padding-right: 70px;
+        margin-left: Opx;
+        height: 50px;
+        &-m
+        {
+            width: 200px;
+            height: 50px;
+        }
+        &-m1
+        {
+           font-size: 25px;
+           height: 50px;
+           position: relative;
+           
+           right: 20px;
+           & a
+           {
+            color: black;
+           }
+        }
+
+    }
+    &-m
+    {
+        object-fit: cover;
+        width: 100%;
+    }
+    .header1_img-size
+    {
+        height:40%;
+    }
+    width: nth($width-box, 1);
+}
+
+
+
+@media screen and (min-width: 992px)
+{
+    .header1
+    {
+        & .figure1
+        {
+            padding-right: 580px;
+            &-m
+            {
+                width: 300px;
+                height: 50px;
+                
+            }
+        }
+        height: 400px;
+        &-m
+        {
+            height: 350px;
+        }
+    }
+}

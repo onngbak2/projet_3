@@ -1,1 +1,300 @@
-aa
+.header
+{
+   
+    display: flex;
+    flex-direction: column ;
+    width: nth($width-box , 1 );
+    background-color: $grey;
+    border: 1px solid $grey;
+    box-shadow: $shadow;
+    padding-bottom: 30px;
+    & figure{
+        width: nth($width-box , 1 );
+        border-bottom: 1px solid $grey;
+        box-shadow: $shadow;
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 20px;
+        margin-left: -8px;
+        margin: 0px;
+        margin-bottom: 5px;
+        height: nth($width-box , 1 );
+        background-color: white;
+        img{
+            width: nth($width-box, 4);
+            object-fit: cover;
+        }
+    }
+    & div{
+        background-color: #F2F2F2;
+        width: nth( $width-box, 1 );
+        height:  60px;
+        margin: 0px;
+        padding-right: 20px;
+        text-align: center;
+        padding-top: 15px;
+        & p{
+            margin: 0px;
+            font-size: 15px;
+            font-weight: lighter;
+            & i{
+                margin-right:5px; 
+            };
+        } 
+    }
+    &-P{
+        text-align: center;
+        font-size: 25px;
+        margin-bottom: 0px;
+        width: nth($width-box, 3 );
+        padding-left: 55px;
+        font-weight: bold;
+    }
+    &-P1{
+        text-align: center;
+        font-size: 20px;
+        width: nth($width-box, 2 );
+        padding-left: 25px;
+
+    }
+   
+}
+
+.section
+{
+    &__fonction 
+    {
+        margin-left: 8px;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 450px;
+        &__menu
+        {
+            padding-right: 35px;
+            height: 70px;
+            gap: 20px 5px;
+            border: 1px solid $grey;
+            width: nth($width-box, 2);
+            background-color: $grey;
+            border-radius: 20px;
+            box-shadow: $shadow;
+            line-height: 23px;
+            &:hover
+            {
+                background-color: rgb(164, 161, 161);
+            }
+            &-m1
+            {
+                display:  flex;
+                flex-direction: row;
+                gap: 50px 10px;
+                font-size: 20px;
+                align-items: center;
+                & .color-logo
+                {
+                    color: $color-primary;
+                }
+            }
+            &-m
+            {
+                text-align: center;
+                text-decoration-line: none;
+                background-color: #9356DC;
+                position: relative;
+                color: #F2F2F2;
+                right: 10px;
+                width: 25px;
+                height: 25px;
+                border-radius: 12px;
+            }
+        }
+        & h2
+        {
+            padding-top: 20px;
+           padding-left: 20px;
+            margin-bottom: 10px ;
+            font-family: shrikhand;
+            font-size: 25px;
+            text-align: left;
+            width: nth($width-box, 1);
+        }
+        padding-bottom: 60px;
+    }
+    &__restaurants
+    {
+        background-color: $grey;
+        padding-top: 30px;
+        height: 1300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 30px;
+       
+        & h2
+        {
+            width: nth($width-box, 1 );
+            font-size: 25px;
+            padding-left: 20px;
+            text-align: left;
+        }
+        &__card
+        {  
+            height: 250px;
+            width: nth($width-box, 2);
+            margin-bottom: 30px;
+            background-color: white;
+            border-radius: 20px;
+            font-size: 15px;
+            box-shadow: 0 0 16px 0 #0000002e;
+            & .Bnew
+            {
+                height: 30px;
+                width: 90px;
+                font-size: 18px;
+                text-align: center;
+                padding-top: 4px;
+                color: rgb(0, 138, 0);
+                float: right;
+                opacity: 90%;
+                position: relative;
+                bottom : 150px;
+                right: 10px;
+                background-color: rgb(169, 230, 169);
+            }
+            &:hover
+            {
+                box-shadow: 6px 6px 16px 10px $color-ombre;
+            }
+            img{
+                object-fit: cover;
+                width: 100%;
+                height: 60%;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+            }
+            & p{
+                font-size: 20px;
+                color: black;
+                text-decoration-line: none;
+            }
+            &-m
+            {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding-left: 10px;
+                padding-right: 20px;
+                
+            }
+            &-m1
+            {
+                
+                text-decoration: none;
+            }
+            &-m2
+            {
+                position: relative;
+                left: 84px;
+            } 
+            .heart
+            {
+                
+                &:hover
+                {
+                    font-size:60px; 
+                    background: $color-primary-grad;
+                    border-color: $color-primary-grad;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px)
+{
+    .header
+    {
+        margin-bottom: 20px;
+        
+        & .btn
+        {
+            width: nth($width-box, 6);
+        }
+        &-P
+        {
+            padding-left: 280px;
+        }
+        &-P1
+        {
+            padding-left: 150px;
+        }
+        & figure
+        {
+
+            height: 120px;
+            img
+            {
+                width: nth($width-box, 6);
+            }
+        }
+    }
+    .section
+    {
+        display: flex ;
+       flex-direction: column;
+       align-items: center;
+        &__fonction
+        {
+            background-color: $grey;
+            display: flex;
+            flex-flow: row wrap;
+            border: 2px solid $grey;
+            box-shadow: $shadow;
+            align-self: center;
+            border-radius: 10px 10px 10px 10px;
+            margin-bottom: 20px;
+            width: 95%;
+            height: 200px;
+            padding: 10px 10px 10px 10px;
+            & h2
+            {
+                text-align: center;
+                padding-top: 0;
+                color: black;
+                width: nth($width-box, 1);
+                font-size: 30px;
+            }
+            &__menu
+            {
+                width: nth($width-box, 6);
+                
+            }
+        }
+        &__restaurants
+        {
+            height: 700px;
+            flex-flow: row wrap;
+            width: nth($width-box, 1);
+            display: flex;
+            justify-content: space-around;
+            & h2{
+                text-align: center;
+                font-size: 30px;
+                margin-right: 25px;
+            }
+            &__card{
+                width: 40%;
+                &-m
+                {
+                    display: flex;
+                    flex-direction: row;
+                }
+            }
+            
+        }
+    }
+}
+

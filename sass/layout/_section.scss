@@ -1,1 +1,26 @@
-aa
+.section1
+{
+    border-radius: 40px 40px;
+    background-color: $grey;
+    
+    margin-top: -55px;
+    position: relative;
+    padding-top: 20px;
+
+}
+
+
+
+
+
+@media screen and (min-width: 992px)
+{
+
+    .section1
+    {
+        display: flex;
+        flex-flow: wrap;
+        justify-content: space-between;
+        padding-right: 30px;
+    }
+}

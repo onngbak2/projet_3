@@ -1,0 +1,41 @@
+.btn{
+    border: 1px solid $color-secondary;
+    width: nth($width-box, 4);
+    background: $color-primary-grad;
+    font-size: 20px;
+    box-shadow: $shadow;
+    height: 65px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 30px ;
+    align-self: center;
+    & a{
+         text-decoration-line: none;
+         color: white;
+    }
+    &:hover
+    {
+       background: linear-gradient(40deg, $color-secondary , $color-primary);
+       box-shadow: 6px 6px 16px 10px $color-ombre ;
+    }
+}
+.btn1
+{
+    margin-left: 50px;
+}
+
+
+
+@media screen and (min-width: 992px)
+{
+    .btn
+    {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .btn1
+    {
+  
+        margin-left: 200px;
+    }
+}

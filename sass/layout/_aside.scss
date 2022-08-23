@@ -1,0 +1,85 @@
+.section1__entrées
+{
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    & h2
+    {
+       font-size: 17px ;
+       margin-left: 18px;
+       margin-bottom: 0px;
+    }
+    &-m
+    {
+        margin-top: 0px;
+        background-color: $green;
+        margin-left: 19px;
+        width: 45px;
+        height: 2px;
+    }
+}
+.section1__plats
+{
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    & h2
+    {
+       font-size: 17px ;
+       margin-left: 18px;
+       margin-bottom: 0px;
+    }
+    &-m
+    {
+        margin-top: 0px;
+        background-color: $green;
+        margin-left: 19px;
+        width: 45px;
+        height: 2px;
+    }
+    
+}
+.section1__desserts
+{
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    
+    & h2
+    {
+       font-size: 17px ;
+       margin-left: 18px;
+       margin-bottom: 0px;
+    }
+    &-m
+    {
+        margin-top: 0px;
+        background-color: $green;
+        margin-left: 19px;
+        width: 45px;
+        height: 2px;
+    }
+}
+@media screen and (min-width: 992px)
+{
+    .section1__titre
+    {
+        width: nth($width-box, 1);
+    }
+    .section1__entrées
+    {
+        width: 30%;
+    }
+    .section1__plats
+    {
+        width: 30%;
+    }
+    .section1__desserts
+    {
+        width: 30%;
+    }
+}
+
