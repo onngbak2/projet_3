@@ -201,12 +201,14 @@
             } 
             .heart
             {
-                
+                transition-property: transform 100ms;
                 &:hover
                 {
                     font-size:60px; 
-                    background: $color-primary-grad;
-                    border-color: $color-primary-grad;
+                    transform: scale(1.10);
+                    background: $color-primary;
+                    border-radius: 30px ;
+                    border-bottom-left-radius: 30px;
                 }
             }
         }

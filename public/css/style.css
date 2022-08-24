@@ -191,10 +191,15 @@ body {
   position: relative;
   left: 84px;
 }
+.section__restaurants__card .heart {
+  transition-property: transform 100ms;
+}
 .section__restaurants__card .heart:hover {
   font-size: 60px;
-  background: linear-gradient(190deg, #FF79DA, #9356DC);
-  border-color: linear-gradient(190deg, #FF79DA, #9356DC);
+  transform: scale(1.1);
+  background: #9356DC;
+  border-radius: 30px;
+  border-bottom-left-radius: 30px;
 }
 
 @media screen and (min-width: 992px) {
@@ -275,13 +280,16 @@ body {
   margin-bottom: 20px;
   border-radius: 30px;
   align-self: center;
+  transition: transform 200ms, background-color 0ms;
 }
 .btn a {
   text-decoration-line: none;
   color: white;
 }
 .btn:hover {
-  background: linear-gradient(40deg, #FF79DA, #9356DC);
+  transform: scale(1.05);
+  background: none;
+  background-color: #FF79DA;
   box-shadow: 6px 6px 16px 10px #d3d3d3;
 }
 
@@ -466,17 +474,42 @@ body {
   width: 90%;
   background-color: #fff;
   box-shadow: 0px 0px 16px 2px #d3d3d3;
-  margin-left: 18px;
   border: 1px solid white;
   border-radius: 10px 10px;
   height: 65px;
 }
 .section1__entrées_card p {
+  margin-left: 18px;
   padding-right: 10px;
   width: 100%;
   margin: 4px;
   display: flex;
   justify-content: space-between;
+}
+.section1__entrées_card-m {
+  transition: transform 40ms;
+  transform-origin: 100% 0%;
+  position: relative;
+  bottom: 50px;
+  left: 290px;
+  margin-right: -10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: 22px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(169, 230, 169);
+  height: 65px;
+  width: 20%;
+  transform: scaleX(0);
+}
+.section1__entrées_card :hover {
+  padding-right: 22%;
+}
+.section1__entrées_card :hover + .section1__entrées_card-m {
+  transform: scaleX(1);
 }
 
 .section1 {

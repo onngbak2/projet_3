@@ -9,13 +9,16 @@
     margin-bottom: 20px;
     border-radius: 30px ;
     align-self: center;
+    transition: transform 200ms, background-color 0ms ;
     & a{
          text-decoration-line: none;
          color: white;
     }
     &:hover
     {
-       background: linear-gradient(40deg, $color-secondary , $color-primary);
+        transform: scale(1.05);
+        background: none;
+       background-color: $color-secondary;
        box-shadow: 6px 6px 16px 10px $color-ombre ;
     }
 }
