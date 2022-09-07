@@ -513,37 +513,38 @@ body {
   justify-content: space-between;
 }
 
-.section1__desserts_card-1 {
+.section1__anim_card-1 {
   animation-name: card-anim;
-  animation-duration: 5s;
-  animation-delay: 0.5s;
+  animation-duration: 3s;
+  animation-delay: 0.2s;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
 }
 
-.section1__desserts_card-2 {
+.section1__anim_card-2 {
   animation-name: card-anim;
-  animation-duration: 5s;
-  animation-delay: 1s;
+  animation-duration: 3s;
+  animation-delay: 0.4s;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
 }
 
-.section1__desserts_card-3 {
+.section1__anim_card-3 {
   animation-name: card-anim;
-  animation-duration: 5s;
-  animation-delay: 1.5s;
+  animation-duration: 3s;
+  animation-delay: 0.6s;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
 }
 
 @keyframes card-anim {
-  25% {
-    transform: translateY(5%);
-    opacity: 1;
+  0% {
+    transform: translateY(20%);
+    opacity: 0;
   }
-  90% {
+  100% {
     transform: translateY(-2%);
+    opacity: 1;
   }
 }
 .section1__plats_card {
@@ -554,6 +555,7 @@ body {
   border: 1px solid white;
   border-radius: 10px 10px;
   height: 65px;
+  transform: scale(0);
 }
 .section1__plats_card p {
   margin: 4px;
@@ -567,9 +569,9 @@ body {
   box-shadow: 0px 0px 16px 2px #d3d3d3;
   border: 1px solid white;
   border-radius: 10px 10px;
-  z-index: 1;
   height: 65px;
   margin-left: 18px;
+  transform: scale(0);
 }
 .section1__entrées_card p {
   padding-right: 10px;
@@ -578,17 +580,15 @@ body {
   display: flex;
   justify-content: space-between;
 }
-.section1__entrées_card p :hover + .section1__entrées_card-m {
+.section1__entrées_card p :hover .section1__entrées_card-m {
   animation: VA-anim 10s ease-out;
 }
 .section1__entrées_card-m {
   transform-origin: 100% 0%;
   overflow: hidden;
-  z-index: 0;
   position: relative;
-  bottom: 50px;
+  bottom: 49px;
   left: 290px;
-  z-index: -1;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   font-size: 22px;
@@ -603,25 +603,16 @@ body {
 .section1__entrées_card :hover {
   padding-right: 22%;
 }
-.section1__entrées_card :hover + i {
+.section1__entrées_card :hover i {
   animation: VAL-anim 5s ease-in;
 }
-.section1__entrées_card :hover + .section1__entrées_card-m {
-  animation: VA-anim 10s cubic-bezier(0.5, 1.58, 0.34, 0.82);
+.section1__entrées_card :hover .section1__entrées_card-m {
+  z-index: 1;
+  animation: VA-anim 10s;
 }
 @keyframes VA-anim {
-  0% {
-    z-index: 1;
-    transform: translateX(-10);
-  }
-  20% {
-    transform: translateX(-20);
-  }
-  50% {
-    transform: translateX(-40);
-  }
   100% {
-    transform: translateX(-60);
+    transform: scaleX(0.3);
   }
 }
 @keyframes VAL-anim {
