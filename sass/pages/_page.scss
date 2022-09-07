@@ -2,4 +2,52 @@
 {
     margin-top: -155px;   
 }
+.loading
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    opacity: 0.6;
+   animation: P-loading  4s;
+   i
+   {
+       opacity: 0;
+       font-size: 20px;
+       animation: L-loading 6s;
+   }
+}
 
+@keyframes P-loading {
+    0%{
+        z-index: 1;
+        opacity: 0.9;
+    }
+    100%{
+        opacity: 0;
+    }
+    
+    
+}
+@keyframes L-loading{
+        0%{
+            opacity: 1;
+            color: red;
+            transform: rotate (360deg);
+        }
+        20%{
+            color: yellow;
+            transform: rotate(-360deg);
+        }
+        70%{
+
+            color: green;
+        }
+        100%{
+            color:red ;
+            transform: rotate(360deg);
+        }
+}

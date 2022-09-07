@@ -7,6 +7,25 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 5px 20px 5px 20px ;
+    & :hover
+    {
+        & .heart
+        {
+            opacity: 0;
+        }
+        & .heart1
+        {
+            transform: scale(1.2);
+            opacity : 1.3;
+        }
+    }
+    .heart1
+    {
+        position: relative;
+        left: 30px;
+        opacity : 0;
+        color: $color-secondary;
+    }
 }
 .section1__desserts_card
 {
@@ -17,12 +36,32 @@
     border: 1px solid white;
     border-radius: 10px 10px;
     height: 65px;
+    transform: scale(0);
     & p
     {
         margin: 4px;
         display: flex;
         justify-content: space-between;
     }
+}
+@for $i from 1 through 3{
+    .section1__desserts_card-#{$i}{
+        animation-name: card-anim ;
+        animation-duration: 5s;
+        animation-delay: 0.5s * $i;
+        animation-fill-mode: forwards;
+        animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
+    }
+}
+@keyframes card-anim{
+    25%{
+        transform: translateY(5%);
+        opacity: 1;
+    }
+    90%{
+        transform: translateY(-2%);
+    }
+    
 }
 .section1__plats_card
 {
@@ -40,7 +79,6 @@
         justify-content: space-between;
     }
 }
-
 .section1__entrées_card
 {
    width: nth($width-box, 2);
@@ -48,24 +86,34 @@
    box-shadow : $shadow;
    border: 1px solid white;
    border-radius: 10px 10px;
+   z-index: 1;
    height: 65px;
+   margin-left: 18px;
    & p
    {
-        margin-left: 18px;
        padding-right: 10px;
        width: 100%;
        margin: 4px;
        display: flex;
        justify-content: space-between;
+        & :hover 
+        {
+             & + .section1__entrées_card-m
+             {
+                animation: VA-anim 10s ease-out;
+            
+             }
+        }
    }
    &-m
    {
-       transition: transform 40ms;
        transform-origin: 100% 0%;
+       overflow: hidden;
+       z-index: 0;
        position:relative;
        bottom: 50px;
        left: 290px;
-       margin-right: -10px;
+       z-index: -1;
        border-top-right-radius: 10px ;
        border-bottom-right-radius: 10px ;
        font-size: 22px;
@@ -76,14 +124,42 @@
         background-color: $green;
         height: 65px;
         width: 20%;
-        transform: scaleX(0);
+
    }
    & :hover 
    {
+        & + i
+        {
+            animation: VAL-anim 5s ease-in;
+        }
         & + .section1__entrées_card-m
         {
-            transform: scaleX(1);
+           animation: VA-anim 10s cubic-bezier(.5,1.58,.34,.82);
+          
         }
         padding-right: 22%;
    }
+   @keyframes VA-anim 
+   {
+        0%{
+            z-index: 1;
+            transform: translateX(-10);
+        }        
+        20%{
+            
+            transform: translateX(-20);
+        }        
+        50%{
+            transform: translateX(-40);
+        }   
+        100%
+        {
+            transform: translateX(-60);
+        }     
+   } 
+   @keyframes VAL-anim{
+       0%{
+           transform: rotate(360deg);
+       }
+   } 
 }

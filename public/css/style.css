@@ -162,8 +162,12 @@ body {
   right: 10px;
   background-color: rgb(169, 230, 169);
 }
-.section__restaurants__card:hover {
-  box-shadow: 6px 6px 16px 10px #d3d3d3;
+.section__restaurants__card a :hover .heart {
+  opacity: 0;
+}
+.section__restaurants__card a :hover .heart1 {
+  transform: scale(1.2);
+  opacity: 1.3;
 }
 .section__restaurants__card img {
   object-fit: cover;
@@ -191,15 +195,11 @@ body {
   position: relative;
   left: 84px;
 }
-.section__restaurants__card .heart {
-  transition-property: transform 100ms;
-}
-.section__restaurants__card .heart:hover {
-  font-size: 60px;
-  transform: scale(1.1);
-  background: #9356DC;
-  border-radius: 30px;
-  border-bottom-left-radius: 30px;
+.section__restaurants__card .heart1 {
+  position: relative;
+  left: 40px;
+  opacity: 0;
+  color: #FF79DA;
 }
 
 @media screen and (min-width: 992px) {
@@ -310,6 +310,50 @@ body {
   margin-top: -155px;
 }
 
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.6;
+  animation: P-loading 4s;
+}
+.loading i {
+  opacity: 0;
+  font-size: 20px;
+  animation: L-loading 6s;
+}
+
+@keyframes P-loading {
+  0% {
+    z-index: 1;
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes L-loading {
+  0% {
+    opacity: 1;
+    color: red;
+    transform: rotate 360deg;
+  }
+  20% {
+    color: yellow;
+    transform: rotate(-360deg);
+  }
+  70% {
+    color: green;
+  }
+  100% {
+    color: red;
+    transform: rotate(360deg);
+  }
+}
 .header1 {
   width: 100%;
 }
@@ -372,7 +416,7 @@ body {
 }
 .section1__entrées-m {
   margin-top: 0px;
-  background-color: rgb(169, 230, 169);
+  background-color: #99e2d0;
   margin-left: 19px;
   width: 45px;
   height: 2px;
@@ -391,7 +435,7 @@ body {
 }
 .section1__plats-m {
   margin-top: 0px;
-  background-color: rgb(169, 230, 169);
+  background-color: #99e2d0;
   margin-left: 19px;
   width: 45px;
   height: 2px;
@@ -410,7 +454,7 @@ body {
 }
 .section1__desserts-m {
   margin-top: 0px;
-  background-color: rgb(169, 230, 169);
+  background-color: #99e2d0;
   margin-left: 19px;
   width: 45px;
   height: 2px;
@@ -439,6 +483,19 @@ body {
   justify-content: space-between;
   padding: 5px 20px 5px 20px;
 }
+.section1__titre :hover .heart {
+  opacity: 0;
+}
+.section1__titre :hover .heart1 {
+  transform: scale(1.2);
+  opacity: 1.3;
+}
+.section1__titre .heart1 {
+  position: relative;
+  left: 30px;
+  opacity: 0;
+  color: #FF79DA;
+}
 
 .section1__desserts_card {
   width: 90%;
@@ -448,6 +505,7 @@ body {
   border: 1px solid white;
   border-radius: 10px 10px;
   height: 65px;
+  transform: scale(0);
 }
 .section1__desserts_card p {
   margin: 4px;
@@ -455,6 +513,39 @@ body {
   justify-content: space-between;
 }
 
+.section1__desserts_card-1 {
+  animation-name: card-anim;
+  animation-duration: 5s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+}
+
+.section1__desserts_card-2 {
+  animation-name: card-anim;
+  animation-duration: 5s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+}
+
+.section1__desserts_card-3 {
+  animation-name: card-anim;
+  animation-duration: 5s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+}
+
+@keyframes card-anim {
+  25% {
+    transform: translateY(5%);
+    opacity: 1;
+  }
+  90% {
+    transform: translateY(-2%);
+  }
+}
 .section1__plats_card {
   width: 90%;
   background-color: #fff;
@@ -476,23 +567,28 @@ body {
   box-shadow: 0px 0px 16px 2px #d3d3d3;
   border: 1px solid white;
   border-radius: 10px 10px;
+  z-index: 1;
   height: 65px;
+  margin-left: 18px;
 }
 .section1__entrées_card p {
-  margin-left: 18px;
   padding-right: 10px;
   width: 100%;
   margin: 4px;
   display: flex;
   justify-content: space-between;
 }
+.section1__entrées_card p :hover + .section1__entrées_card-m {
+  animation: VA-anim 10s ease-out;
+}
 .section1__entrées_card-m {
-  transition: transform 40ms;
   transform-origin: 100% 0%;
+  overflow: hidden;
+  z-index: 0;
   position: relative;
   bottom: 50px;
   left: 290px;
-  margin-right: -10px;
+  z-index: -1;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   font-size: 22px;
@@ -500,16 +596,38 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(169, 230, 169);
+  background-color: #99e2d0;
   height: 65px;
   width: 20%;
-  transform: scaleX(0);
 }
 .section1__entrées_card :hover {
   padding-right: 22%;
 }
+.section1__entrées_card :hover + i {
+  animation: VAL-anim 5s ease-in;
+}
 .section1__entrées_card :hover + .section1__entrées_card-m {
-  transform: scaleX(1);
+  animation: VA-anim 10s cubic-bezier(0.5, 1.58, 0.34, 0.82);
+}
+@keyframes VA-anim {
+  0% {
+    z-index: 1;
+    transform: translateX(-10);
+  }
+  20% {
+    transform: translateX(-20);
+  }
+  50% {
+    transform: translateX(-40);
+  }
+  100% {
+    transform: translateX(-60);
+  }
+}
+@keyframes VAL-anim {
+  0% {
+    transform: rotate(360deg);
+  }
 }
 
 .section1 {

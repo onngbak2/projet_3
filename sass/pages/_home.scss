@@ -164,9 +164,19 @@
                 right: 10px;
                 background-color: rgb(169, 230, 169);
             }
-            &:hover
-            {
-                box-shadow: 6px 6px 16px 10px $color-ombre;
+            & a{
+                & :hover
+                {
+                    & .heart
+                    {
+                        opacity: 0;
+                    }
+                    & .heart1
+                    {
+                        transform: scale(1.2);
+                        opacity : 1.3;
+                    }
+                }
             }
             img{
                 object-fit: cover;
@@ -199,18 +209,14 @@
                 position: relative;
                 left: 84px;
             } 
-            .heart
+            .heart1
             {
-                transition-property: transform 100ms;
-                &:hover
-                {
-                    font-size:60px; 
-                    transform: scale(1.10);
-                    background: $color-primary;
-                    border-radius: 30px ;
-                    border-bottom-left-radius: 30px;
-                }
+                position: relative;
+                left: 40px;
+                opacity : 0;
+                color: $color-secondary;
             }
+
         }
     }
 }
