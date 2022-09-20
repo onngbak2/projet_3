@@ -11,7 +11,7 @@
     position: fixed;
     inset: 0;
     z-index: -1;
-    opacity: 0.6;
+    opacity: 3.6;
    animation: P-loading  4s;
    i
    {
@@ -34,7 +34,7 @@
 }
 @keyframes L-loading{
         0%{
-            opacity: 1;
+           opacity: 5.6;
             color: red;
             transform: rotate (360deg);
         }
