@@ -3,16 +3,33 @@
     font-size: 15px;
     font-style: italic;
     display: flex;
+    width: 90%;
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
     padding: 5px 20px 5px 20px ;
-    .heart1
+    .heart2
     {
         position: relative;
-        left: 30px;
-        opacity : 0;
-        color: $color-secondary;
+        left: 5px;
+    }
+    .heart2
+    {
+        svg{
+            overflow: visible;
+        }
+        path{
+            stroke: black;
+            stroke-width : 2px;
+            stroke-opacity: 1;
+            fill: url(#gradient1);
+            fill-opacity: 0;
+            transition: all 500ms ease-in-out;
+        }
+        path:hover{
+            stroke-opacity: 0;
+            fill-opacity: 1;
+        }
     }
 }
 .section1__desserts_card
@@ -32,17 +49,17 @@
         display: flex;
         justify-content: space-between;
     }
-    & :hover 
+    & :hover + .section1__entrées_card-m
     {
-         & + .section1__entrées_card-m
+         transform: translateX(-50px);
+         i
          {
-           transform: translateX(-100%);
+             transform: rotate(-360deg);
          }
-         & +  i{
-             transition: transform 400ms;
-             transform: rotate(360deg);  
-           }
-         padding-right: 17%;
+    }
+    & :hover
+    {
+        width: 83%;
     }
 }
 @for $i from 1 through 9{
@@ -83,18 +100,17 @@
         display: flex;
         justify-content: space-between;
     }
-    :hover 
+    & :hover + .section1__entrées_card-m
     {
-        & + .section1__entrées_card-m
-        {
-          transform: translateX(-100%);
-        }
-        & + i
-        {
-            transition: transform 2s;
-            transform: rotate(360deg);
-        }
-        padding-right: 15%;
+         transform: translateX(-50px);
+         i
+         {
+             transform: rotate(-360deg);
+         }
+    }
+    & :hover
+    {
+        width: 83%;
     }
 }
 .section1__entrées_card
@@ -111,6 +127,7 @@
    {
        padding-right: 10px;
        width: 100%;
+       text-overflow: ellipsis;
        flex-wrap: nowrap;
        overflow:hidden;
        margin: 4px;
@@ -133,19 +150,22 @@
        background-color: $green;
        height: 70px;
        width: 15%;
-        transition: transform 400ms;
+        transition: transform 400ms ease-in-out;
+        i{
+            transition: transform 500ms ease-in-out;
+        }
    }
-   :hover 
+   & :hover + .section1__entrées_card-m
    {
-        & + .section1__entrées_card-m
+        transform: translateX(-50px);
+        i
         {
-          transform: translateX(-100%);
+            transform: rotate(-360deg);
         }
-        & + i
-        {
-            animation: check-rot 5s;
-        }
-        padding-right: 17%;
+   }
+   & :hover
+   {
+       width: 83%;
    }
 }
 @keyframes check-rot
@@ -154,6 +174,6 @@
         transform: rotate(360deg);
     }
     100%{
-        transform: rotate(360deg);
+        transform: rotate(0);
     } 
 }
