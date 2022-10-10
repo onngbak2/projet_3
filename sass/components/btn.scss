@@ -1,5 +1,5 @@
 .btn{
-    border: 1px solid $color-secondary;
+    border: 1px solid $color-primary;
     width: nth($width-box, 4);
     background: $color-primary-grad;
     font-size: 20px;
@@ -9,7 +9,7 @@
     margin-bottom: 20px;
     border-radius: 30px ;
     align-self: center;
-    transition: transform 200ms, background-color 0ms ;
+    transition: transform 200ms,;
     & a{
          text-decoration-line: none;
          color: white;
@@ -17,8 +17,7 @@
     &:hover
     {
         transform: scale(1.05);
-        background: none;
-       background-color: $color-secondary;
+        filter:brightness(111%);
        box-shadow: 6px 6px 16px 10px $color-ombre ;
     }
 }

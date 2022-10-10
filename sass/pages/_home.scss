@@ -84,7 +84,11 @@
             line-height: 23px;
             &:hover
             {
-                background-color: rgb(164, 161, 161);
+                background-color: #9256dc;
+                & .color-logo
+                {
+                    color: black;
+                }
             }
             &-m1
             {
@@ -212,7 +216,7 @@
         stroke-opacity: 1;
         fill: url(#gradient1);
         fill-opacity: 0;
-        transition: all 500ms ease-in-out;
+        transition: all 100ms ease-in-out;
     }
     path:hover{
         stroke-opacity: 0;

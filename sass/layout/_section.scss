@@ -6,19 +6,6 @@
     margin-top: -55px;
     position: relative;
     padding-top: 20px;
-    path
-    {
-        fill: $color-secondary;
-        fill-opacity: 0;
-        stroke: black;
-        stroke-width: 25px;
-       &:hover
-       {
-           stroke: $color-secondary;
-            fill-opacity: 1;
-            transform: scale(1); 
-       }
-    }
 }
 
 

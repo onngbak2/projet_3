@@ -92,7 +92,10 @@ body {
   line-height: 23px;
 }
 .section__fonction__menu:hover {
-  background-color: rgb(164, 161, 161);
+  background-color: #9256dc;
+}
+.section__fonction__menu:hover .color-logo {
+  color: black;
 }
 .section__fonction__menu-m1 {
   display: flex;
@@ -203,7 +206,7 @@ body {
   stroke-opacity: 1;
   fill: url(#gradient1);
   fill-opacity: 0;
-  transition: all 500ms ease-in-out;
+  transition: all 100ms ease-in-out;
 }
 .heart1 path:hover {
   stroke-opacity: 0;
@@ -278,7 +281,7 @@ body {
   }
 }
 .btn {
-  border: 1px solid #FF79DA;
+  border: 1px solid #9356DC;
   width: 65%;
   background: linear-gradient(190deg, #FF79DA, #9356DC);
   font-size: 20px;
@@ -288,7 +291,7 @@ body {
   margin-bottom: 20px;
   border-radius: 30px;
   align-self: center;
-  transition: transform 200ms, background-color 0ms;
+  transition: transform 200ms;
 }
 .btn a {
   text-decoration-line: none;
@@ -296,8 +299,7 @@ body {
 }
 .btn:hover {
   transform: scale(1.05);
-  background: none;
-  background-color: #FF79DA;
+  filter: brightness(111%);
   box-shadow: 6px 6px 16px 10px #d3d3d3;
 }
 
@@ -519,11 +521,15 @@ body {
   margin-left: 18px;
   border-radius: 10px 10px;
   overflow: hidden;
+  z-index: 1;
   height: 65px;
+  transition: width 300ms ease-in;
   transform: scale(0);
+  text-overflow: ellipsis;
 }
 .section1__desserts_card p {
   overflow: hidden;
+  text-overflow: ellipsis;
   margin: 4px;
   display: flex;
   justify-content: space-between;
@@ -711,17 +717,6 @@ body {
   margin-top: -55px;
   position: relative;
   padding-top: 20px;
-}
-.section1 path {
-  fill: #FF79DA;
-  fill-opacity: 0;
-  stroke: black;
-  stroke-width: 25px;
-}
-.section1 path:hover {
-  stroke: #FF79DA;
-  fill-opacity: 1;
-  transform: scale(1);
 }
 
 @media screen and (min-width: 992px) {

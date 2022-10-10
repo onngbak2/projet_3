@@ -40,11 +40,15 @@
     margin-left: 18px;
     border-radius: 10px 10px;
     overflow: hidden;
+    z-index: 1;
     height: 65px;
+    transition: width 300ms ease-in;
     transform: scale(0);
+    text-overflow: ellipsis;
     & p
     {
         overflow: hidden ;
+        text-overflow: ellipsis;
         margin: 4px;
         display: flex;
         justify-content: space-between;
