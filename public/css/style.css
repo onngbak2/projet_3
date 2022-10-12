@@ -395,7 +395,7 @@ body {
   width: 100%;
 }
 .header1 .header1_img-size {
-  height: 70%;
+  height: 250px;
 }
 
 @media screen and (min-width: 992px) {
@@ -411,6 +411,9 @@ body {
   }
   .header1-m {
     height: 350px;
+  }
+  .header1 .header1_img-size {
+    height: 70%;
   }
 }
 .section1__entrées {
@@ -523,25 +526,49 @@ body {
   overflow: hidden;
   z-index: 1;
   height: 65px;
-  transition: width 300ms ease-in;
+  flex-wrap: nowrap;
   transform: scale(0);
   text-overflow: ellipsis;
 }
+.section1__desserts_card-m {
+  transform-origin: 100% 0%;
+  position: relative;
+  bottom: 50px;
+  left: 100%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: 22px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99e2d0;
+  height: 70px;
+  width: 15%;
+  transition: transform 400ms ease-in-out;
+}
+.section1__desserts_card-m i {
+  transition: transform 500ms ease-in-out;
+}
 .section1__desserts_card p {
+  overflow-wrap: normal;
   overflow: hidden;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+  transition: width 700ms ease-in;
   text-overflow: ellipsis;
   margin: 4px;
   display: flex;
   justify-content: space-between;
 }
-.section1__desserts_card :hover + .section1__entrées_card-m {
+.section1__desserts_card :hover + .section1__desserts_card-m {
   transform: translateX(-50px);
 }
-.section1__desserts_card :hover + .section1__entrées_card-m i {
+.section1__desserts_card :hover + .section1__desserts_card-m i {
   transform: rotate(-360deg);
 }
-.section1__desserts_card :hover {
-  width: 83%;
+.section1__desserts_card :hover + p {
+  padding-right: 10%;
 }
 
 .section1__anim_card-1 {
@@ -635,6 +662,27 @@ body {
   height: 65px;
   overflow: hidden;
   transform: scale(0);
+  text-overflow: ellipsis;
+}
+.section1__plats_card-m {
+  transform-origin: 100% 0%;
+  position: relative;
+  bottom: 50px;
+  left: 100%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: 22px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99e2d0;
+  height: 70px;
+  width: 20%;
+  transition: transform 400ms ease-in-out;
+}
+.section1__plats_card-m i {
+  transition: transform 500ms ease-in-out;
 }
 .section1__plats_card p {
   text-overflow: ellipsis;
@@ -643,14 +691,11 @@ body {
   display: flex;
   justify-content: space-between;
 }
-.section1__plats_card :hover + .section1__entrées_card-m {
-  transform: translateX(-50px);
+.section1__plats_card :hover + .section1__plats_card-m {
+  transform: translateX(-100%);
 }
-.section1__plats_card :hover + .section1__entrées_card-m i {
+.section1__plats_card :hover + .section1__plats_card-m i {
   transform: rotate(-360deg);
-}
-.section1__plats_card :hover {
-  width: 83%;
 }
 
 .section1__entrées_card {
@@ -666,9 +711,9 @@ body {
 .section1__entrées_card p {
   padding-right: 10px;
   width: 100%;
+  white-space: nowrap;
   text-overflow: ellipsis;
   flex-wrap: nowrap;
-  overflow: hidden;
   margin: 4px;
   display: flex;
   justify-content: space-between;
@@ -687,30 +732,22 @@ body {
   align-items: center;
   background-color: #99e2d0;
   height: 70px;
-  width: 15%;
+  width: 70px;
   transition: transform 400ms ease-in-out;
 }
 .section1__entrées_card-m i {
   transition: transform 500ms ease-in-out;
 }
 .section1__entrées_card :hover + .section1__entrées_card-m {
-  transform: translateX(-50px);
+  transform: translateX(-100%);
 }
 .section1__entrées_card :hover + .section1__entrées_card-m i {
   transform: rotate(-360deg);
 }
 .section1__entrées_card :hover {
-  width: 83%;
+  padding-right: 15%;
 }
 
-@keyframes check-rot {
-  0% {
-    transform: rotate(360deg);
-  }
-  100% {
-    transform: rotate(0);
-  }
-}
 .section1 {
   border-radius: 40px 40px;
   background-color: #f6f6f6;

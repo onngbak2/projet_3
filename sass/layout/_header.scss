@@ -34,9 +34,9 @@
         object-fit: cover;
         width: 100%;
     }
-    .header1_img-size
+    & .header1_img-size
     {
-        height:70%;
+        height: 250px;
     }
     width: nth($width-box, 1);
 }
@@ -61,6 +61,10 @@
         &-m
         {
             height: 350px;
+        }
+        .header1_img-size
+        {
+            height:70%;
         }
     }
 }

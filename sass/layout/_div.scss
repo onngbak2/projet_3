@@ -42,18 +42,43 @@
     overflow: hidden;
     z-index: 1;
     height: 65px;
-    transition: width 300ms ease-in;
+    flex-wrap: nowrap;
     transform: scale(0);
     text-overflow: ellipsis;
+    &-m
+    {
+        transform-origin: 100% 0%;
+        position:relative;
+        bottom: 50px;
+        left: 100%;
+        border-top-right-radius: 10px ;
+        border-bottom-right-radius: 10px ;
+        font-size: 22px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $green;
+        height: 70px;
+        width: 15%;
+        transition: transform 400ms ease-in-out;
+        i{
+            transition: transform 500ms ease-in-out;
+        }
+    }
     & p
     {
+        overflow-wrap: normal;
         overflow: hidden ;
+        white-space: nowrap;
+        flex-wrap: nowrap;
+        transition: width 700ms ease-in;
         text-overflow: ellipsis;
         margin: 4px;
         display: flex;
         justify-content: space-between;
     }
-    & :hover + .section1__entrées_card-m
+    & :hover + .section1__desserts_card-m
     {
          transform: translateX(-50px);
          i
@@ -61,9 +86,9 @@
              transform: rotate(-360deg);
          }
     }
-    & :hover
+    & :hover + p
     {
-        width: 83%;
+       padding-right: 10%;
     }
 }
 @for $i from 1 through 9{
@@ -96,6 +121,29 @@
     height: 65px;
     overflow: hidden;
     transform: scale(0);
+    text-overflow: ellipsis;
+    &-m
+    {
+        transform-origin: 100% 0%;
+        position:relative;
+        bottom: 50px;
+        left: 100%;
+        border-top-right-radius: 10px ;
+        border-bottom-right-radius: 10px ;
+        font-size: 22px;
+        color: white;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $green;
+        height: 70px;
+        width: 20%;
+     transition: transform 400ms ease-in-out;
+     i{
+         transition: transform 500ms ease-in-out;
+     }
+    }
     & p
     {
         text-overflow: ellipsis;
@@ -104,17 +152,13 @@
         display: flex;
         justify-content: space-between;
     }
-    & :hover + .section1__entrées_card-m
+    & :hover + .section1__plats_card-m
     {
-         transform: translateX(-50px);
+         transform: translateX(-100%);
          i
          {
              transform: rotate(-360deg);
          }
-    }
-    & :hover
-    {
-        width: 83%;
     }
 }
 .section1__entrées_card
@@ -131,9 +175,10 @@
    {
        padding-right: 10px;
        width: 100%;
+       white-space: nowrap;
        text-overflow: ellipsis;
        flex-wrap: nowrap;
-       overflow:hidden;
+       
        margin: 4px;
        display: flex;
        justify-content: space-between;
@@ -153,7 +198,7 @@
        align-items: center;
        background-color: $green;
        height: 70px;
-       width: 15%;
+       width: 70px;
         transition: transform 400ms ease-in-out;
         i{
             transition: transform 500ms ease-in-out;
@@ -161,7 +206,7 @@
    }
    & :hover + .section1__entrées_card-m
    {
-        transform: translateX(-50px);
+        transform: translateX(-100%);
         i
         {
             transform: rotate(-360deg);
@@ -169,15 +214,6 @@
    }
    & :hover
    {
-       width: 83%;
+       padding-right: 15%;
    }
-}
-@keyframes check-rot
-{
-    0%{
-        transform: rotate(360deg);
-    }
-    100%{
-        transform: rotate(0);
-    } 
 }
