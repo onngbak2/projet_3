@@ -544,7 +544,7 @@ body {
   align-items: center;
   background-color: #99e2d0;
   height: 70px;
-  width: 15%;
+  width: 70px;
   transition: transform 400ms ease-in-out;
 }
 .section1__desserts_card-m i {
@@ -561,14 +561,14 @@ body {
   display: flex;
   justify-content: space-between;
 }
+.section1__desserts_card p:hover {
+  padding-right: 13%;
+}
 .section1__desserts_card :hover + .section1__desserts_card-m {
-  transform: translateX(-50px);
+  transform: translateX(-100%);
 }
 .section1__desserts_card :hover + .section1__desserts_card-m i {
   transform: rotate(-360deg);
-}
-.section1__desserts_card :hover + p {
-  padding-right: 10%;
 }
 
 .section1__anim_card-1 {
@@ -678,7 +678,7 @@ body {
   align-items: center;
   background-color: #99e2d0;
   height: 70px;
-  width: 20%;
+  width: 70px;
   transition: transform 400ms ease-in-out;
 }
 .section1__plats_card-m i {
@@ -690,6 +690,9 @@ body {
   margin: 4px;
   display: flex;
   justify-content: space-between;
+}
+.section1__plats_card p:hover {
+  padding-right: 13%;
 }
 .section1__plats_card :hover + .section1__plats_card-m {
   transform: translateX(-100%);
@@ -717,6 +720,9 @@ body {
   margin: 4px;
   display: flex;
   justify-content: space-between;
+}
+.section1__entrées_card p:hover {
+  padding-right: 15%;
 }
 .section1__entrées_card-m {
   transform-origin: 100% 0%;
