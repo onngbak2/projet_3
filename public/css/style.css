@@ -92,7 +92,7 @@ body {
   line-height: 23px;
 }
 .section__fonction__menu:hover {
-  background-color: #9256dc;
+  background-color: #dcccef;
 }
 .section__fonction__menu:hover .color-logo {
   color: black;
@@ -285,7 +285,7 @@ body {
   width: 65%;
   background: linear-gradient(190deg, #FF79DA, #9356DC);
   font-size: 20px;
-  box-shadow: 0px 0px 16px 2px #d3d3d3;
+  box-shadow: 2px 6px 16px 2px rgb(179, 177, 177);
   height: 65px;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -300,7 +300,7 @@ body {
 .btn:hover {
   transform: scale(1.05);
   filter: brightness(111%);
-  box-shadow: 6px 6px 16px 10px #d3d3d3;
+  box-shadow: 6px 6px 16px 2px rgb(179, 177, 177);
 }
 
 .btn1 {
@@ -555,14 +555,14 @@ body {
   overflow: hidden;
   white-space: nowrap;
   flex-wrap: nowrap;
-  transition: width 700ms ease-in;
+  transition: width 1s ease-in;
   text-overflow: ellipsis;
   margin: 4px;
   display: flex;
   justify-content: space-between;
 }
-.section1__desserts_card p:hover {
-  padding-right: 13%;
+.section1__desserts_card:hover p {
+  width: 50%;
 }
 .section1__desserts_card :hover + .section1__desserts_card-m {
   transform: translateX(-100%);

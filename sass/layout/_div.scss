@@ -66,21 +66,21 @@
             transition: transform 500ms ease-in-out;
         }
     }
-    & p
+    & p 
     {
-        &:hover 
-        {
-           padding-right: 13%;
-        }
         overflow-wrap: normal;
         overflow: hidden ;
         white-space: nowrap;
         flex-wrap: nowrap;
-        transition: width 700ms ease-in;
+        transition: width 1s ease-in;
         text-overflow: ellipsis;
         margin: 4px;
         display: flex;
         justify-content: space-between;
+    }
+    &:hover p 
+    {
+        width: 50%;
     }
     & :hover + .section1__desserts_card-m
     {
@@ -132,7 +132,6 @@
         border-bottom-right-radius: 10px ;
         font-size: 22px;
         color: white;
-        
         display: flex;
         justify-content: center;
         align-items: center;
@@ -177,7 +176,7 @@
    transform: scale(0);
    & p
    {
-         &:hover 
+        &:hover 
         {
            padding-right: 15%;
         }
@@ -186,7 +185,6 @@
        white-space: nowrap;
        text-overflow: ellipsis;
        flex-wrap: nowrap;
-       
        margin: 4px;
        display: flex;
        justify-content: space-between;

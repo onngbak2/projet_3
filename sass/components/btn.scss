@@ -3,7 +3,7 @@
     width: nth($width-box, 4);
     background: $color-primary-grad;
     font-size: 20px;
-    box-shadow: $shadow;
+    box-shadow: 2px 6px 16px 2px rgb(179, 177, 177);
     height: 65px;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -18,7 +18,7 @@
     {
         transform: scale(1.05);
         filter:brightness(111%);
-       box-shadow: 6px 6px 16px 10px $color-ombre ;
+       box-shadow: 6px 6px 16px 2px rgb(179, 177, 177) ;
     }
 }
 .btn1
