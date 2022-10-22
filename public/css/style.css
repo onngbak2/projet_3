@@ -517,20 +517,29 @@ body {
   fill-opacity: 1;
 }
 
-.section1__desserts_card {
+.section1_card {
   width: 90%;
   background-color: #fff;
   box-shadow: 0px 0px 16px 2px #d3d3d3;
-  margin-left: 18px;
   border-radius: 10px 10px;
-  overflow: hidden;
-  z-index: 1;
   height: 65px;
-  flex-wrap: nowrap;
+  margin-left: 18px;
+  overflow: hidden;
   transform: scale(0);
-  text-overflow: ellipsis;
 }
-.section1__desserts_card-m {
+.section1_card p {
+  padding-right: 10px;
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  flex-wrap: nowrap;
+  margin: 4px;
+  display: flex;
+  justify-content: space-between;
+  transition: all width 1s;
+  transition-delay: 200ms;
+}
+.section1_card-m {
   transform-origin: 100% 0%;
   position: relative;
   bottom: 50px;
@@ -547,28 +556,17 @@ body {
   width: 70px;
   transition: transform 400ms ease-in-out;
 }
-.section1__desserts_card-m i {
+.section1_card-m i {
   transition: transform 500ms ease-in-out;
 }
-.section1__desserts_card p {
-  overflow-wrap: normal;
-  overflow: hidden;
-  white-space: nowrap;
-  flex-wrap: nowrap;
-  transition: width 1s ease-in;
-  text-overflow: ellipsis;
-  margin: 4px;
-  display: flex;
-  justify-content: space-between;
-}
-.section1__desserts_card:hover p {
-  width: 50%;
-}
-.section1__desserts_card :hover + .section1__desserts_card-m {
+.section1_card:hover .section1_card-m {
   transform: translateX(-100%);
 }
-.section1__desserts_card :hover + .section1__desserts_card-m i {
+.section1_card:hover i {
   transform: rotate(-360deg);
+}
+.section1_card:hover p {
+  width: 80%;
 }
 
 .section1__anim_card-1 {
@@ -653,107 +651,6 @@ body {
     opacity: 1;
   }
 }
-.section1__plats_card {
-  width: 90%;
-  background-color: #fff;
-  box-shadow: 0px 0px 16px 2px #d3d3d3;
-  margin-left: 18px;
-  border-radius: 10px 10px;
-  height: 65px;
-  overflow: hidden;
-  transform: scale(0);
-  text-overflow: ellipsis;
-}
-.section1__plats_card-m {
-  transform-origin: 100% 0%;
-  position: relative;
-  bottom: 50px;
-  left: 100%;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  font-size: 22px;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #99e2d0;
-  height: 70px;
-  width: 70px;
-  transition: transform 400ms ease-in-out;
-}
-.section1__plats_card-m i {
-  transition: transform 500ms ease-in-out;
-}
-.section1__plats_card p {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  margin: 4px;
-  display: flex;
-  justify-content: space-between;
-}
-.section1__plats_card p:hover {
-  padding-right: 13%;
-}
-.section1__plats_card :hover + .section1__plats_card-m {
-  transform: translateX(-100%);
-}
-.section1__plats_card :hover + .section1__plats_card-m i {
-  transform: rotate(-360deg);
-}
-
-.section1__entrées_card {
-  width: 90%;
-  background-color: #fff;
-  box-shadow: 0px 0px 16px 2px #d3d3d3;
-  border-radius: 10px 10px;
-  height: 65px;
-  margin-left: 18px;
-  overflow: hidden;
-  transform: scale(0);
-}
-.section1__entrées_card p {
-  padding-right: 10px;
-  width: 100%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  flex-wrap: nowrap;
-  margin: 4px;
-  display: flex;
-  justify-content: space-between;
-}
-.section1__entrées_card p:hover {
-  padding-right: 15%;
-}
-.section1__entrées_card-m {
-  transform-origin: 100% 0%;
-  position: relative;
-  bottom: 50px;
-  left: 100%;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  font-size: 22px;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #99e2d0;
-  height: 70px;
-  width: 70px;
-  transition: transform 400ms ease-in-out;
-}
-.section1__entrées_card-m i {
-  transition: transform 500ms ease-in-out;
-}
-.section1__entrées_card :hover + .section1__entrées_card-m {
-  transform: translateX(-100%);
-}
-.section1__entrées_card :hover + .section1__entrées_card-m i {
-  transform: rotate(-360deg);
-}
-.section1__entrées_card :hover {
-  padding-right: 15%;
-}
-
 .section1 {
   border-radius: 40px 40px;
   background-color: #f6f6f6;

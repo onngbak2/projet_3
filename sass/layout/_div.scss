@@ -32,139 +32,7 @@
         }
     }
 }
-.section1__desserts_card
-{
-    width: nth($width-box, 2);
-    background-color: #fff;
-    box-shadow: $shadow;
-    margin-left: 18px;
-    border-radius: 10px 10px;
-    overflow: hidden;
-    z-index: 1;
-    height: 65px;
-    flex-wrap: nowrap;
-    transform: scale(0);
-    text-overflow: ellipsis;
-    &-m
-    {
-        transform-origin: 100% 0%;
-        position:relative;
-        bottom: 50px;
-        left: 100%;
-        border-top-right-radius: 10px ;
-        border-bottom-right-radius: 10px ;
-        font-size: 22px;
-        color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: $green;
-        height: 70px;
-        width: 70px;
-        transition: transform 400ms ease-in-out;
-        i{
-            transition: transform 500ms ease-in-out;
-        }
-    }
-    & p 
-    {
-        overflow-wrap: normal;
-        overflow: hidden ;
-        white-space: nowrap;
-        flex-wrap: nowrap;
-        transition: width 1s ease-in;
-        text-overflow: ellipsis;
-        margin: 4px;
-        display: flex;
-        justify-content: space-between;
-    }
-    &:hover p 
-    {
-        width: 50%;
-    }
-    & :hover + .section1__desserts_card-m
-    {
-         transform: translateX(-100%);
-         i
-         {
-             transform: rotate(-360deg);
-         }
-    }
-}
-@for $i from 1 through 9{
-    .section1__anim_card-#{$i}{
-        animation-name: card-anim ;
-        animation-duration: 3s;
-        animation-delay: 0.5s * $i;
-        animation-fill-mode: forwards;
-        animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
-    }
-}
-@keyframes card-anim{
-    0%{
-        transform: translateY(20%);
-        opacity: 0;
-    }
-    100%{
-        transform: translateY(-2%);
-        opacity: 1;
-    }
-    
-}
-.section1__plats_card
-{
-    width: nth($width-box, 2);
-    background-color: #fff;
-    box-shadow: $shadow;
-    margin-left: 18px;
-    border-radius: 10px 10px;
-    height: 65px;
-    overflow: hidden;
-    transform: scale(0);
-    text-overflow: ellipsis;
-    &-m
-    {
-        transform-origin: 100% 0%;
-        position:relative;
-        bottom: 50px;
-        left: 100%;
-        border-top-right-radius: 10px ;
-        border-bottom-right-radius: 10px ;
-        font-size: 22px;
-        color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: $green;
-        height: 70px;
-        width: 70px;
-     transition: transform 400ms ease-in-out;
-     i{
-         transition: transform 500ms ease-in-out;
-     }
-    }
-    & p
-    {
-        &:hover 
-        {
-           padding-right: 13%;
-        }
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        margin: 4px;
-        display: flex;
-        justify-content: space-between;
-    }
-    & :hover + .section1__plats_card-m
-    {
-         transform: translateX(-100%);
-         i
-         {
-             transform: rotate(-360deg);
-         }
-    }
-}
-.section1__entrées_card
+.section1_card
 {
    width: nth($width-box, 2);
    background-color: #fff;
@@ -176,10 +44,6 @@
    transform: scale(0);
    & p
    {
-        &:hover 
-        {
-           padding-right: 15%;
-        }
        padding-right: 10px;
        width: 100%;
        white-space: nowrap;
@@ -188,6 +52,8 @@
        margin: 4px;
        display: flex;
        justify-content: space-between;
+       transition: all width 1s;
+       transition-delay: 200ms;
    }
    &-m
    {
@@ -210,16 +76,42 @@
             transition: transform 500ms ease-in-out;
         }
    }
-   & :hover + .section1__entrées_card-m
+   &:hover 
    {
-        transform: translateX(-100%);
+        .section1_card-m
+        {
+            transform: translateX(-100%);
+        }
         i
         {
             transform: rotate(-360deg);
         }
    }
-   & :hover
+   &:hover
    {
-       padding-right: 15%;
+        p
+        {
+            width: 80%;
+        } 
    }
+}
+@for $i from 1 through 9{
+    .section1__anim_card-#{$i}{
+        animation-name: card-anim ;
+        animation-duration: 3s;
+        animation-delay: 0.5s * $i;
+        animation-fill-mode: forwards;
+        animation-timing-function: cubic-bezier(.5,1.58,.34,.82);
+    }
+}
+@keyframes card-anim{
+    0%{
+        transform: translateY(20%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(-2%);
+        opacity: 1;
+    }
+    
 }
